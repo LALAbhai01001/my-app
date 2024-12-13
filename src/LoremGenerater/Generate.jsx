@@ -41,7 +41,8 @@ const Generate = () => {
         <h2 className="display-4 m-0 text-center">Text Generater</h2>
         <form>
             <label htmlFor="name">Text Generater</label>
-            <input type="number" id='name' placeholder='e.g 4' className='form-control' 
+            <input type="number" id='name' placeholder='e.g 4'
+            className={`form-control ${error ? "is-invalid" : ""}`} 
             value={number} onChange={(e)=>setNumber(e.target.value)}
             />
             {error && <p className='text-danger m-0'>Number should be lessthan or equal to {Data?.length}</p> }
